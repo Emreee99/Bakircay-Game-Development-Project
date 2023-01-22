@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class TextMovement : MonoBehaviour
 {
-    public float speed = 6f; // movement speed
+    public float speed = 6f;
 
-    Vector3 movement; // movement direction
-    Animator anim; // reference to the animator component
-    Rigidbody playerRigidbody; // reference to the rigidbody component
-    int floorMask; // layer mask for the floor
-    float camRayLength = 100f; // length of the ray from the camera
+    Vector3 movement;
+    Animator anim;
+    Rigidbody playerRigidbody;
+    int floorMask;
+    float camRayLength = 100f;
 
     void Awake()
     {
-        // create a layer mask for the floor layer
         floorMask = LayerMask.GetMask("Floor");
     }
 
